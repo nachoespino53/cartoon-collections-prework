@@ -23,5 +23,9 @@ end
 
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  array.any?(cheese_types)
+  for i in 0..2 do
+    if array.any?(cheese_types[i])
+      return cheese_types[i]
+    end
+  end
 end
